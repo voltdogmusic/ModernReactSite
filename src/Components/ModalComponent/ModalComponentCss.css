@@ -1,0 +1,8 @@
+#button{
+    /*background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);*/
+    transform:   scale(1.25) translateX(-.2rem);
+    /*-ms-transform: translate(50px,100px); !* IE 9 *!*/
+    /*-webkit-transform: translate(50px,100px); !* Safari *!*/
+    /*transform: translate(50px,100px); !* Standard syntax *!*/
+}
+

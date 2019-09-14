@@ -1,0 +1,107 @@
+<html>
+
+<ul class = "topnav">
+<li><a class="active" href="#home">Home</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#contact">Contact</a></li>
+<li class="search">
+<input type="text" class="search-input" placeholder="Search">
+</li>
+<div id="signIn"></div>
+
+</ul>
+
+<script>
+    body {
+        margin: 0;
+    }
+
+    /*list container */
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        /*whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.*/
+        /*The overflow is clipped, and the rest of the content will be invisible*/
+        overflow: hidden;
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        /*display: block;*/
+        max-height: 50rem;
+    }
+
+    /*individual elements in list */
+    li {
+        /*all list items will allow things to go on its left */
+        float: left;
+        border-right: 1px solid #bbb;
+    }
+
+
+    /*individual links/text in list */
+    li a {
+        /*makes inner list items occupy entire width*/
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Heebo', sans-serif;
+
+    }
+
+
+    /*make about goto right and remove boarder*/
+    /*li:last-child {*/
+    /*float: right;*/
+    /*border-right: none;*/
+    /*}*/
+
+    .search {
+        float: right;
+        margin: 0;
+        max-height: 50rem;
+        padding-top: .55rem;
+
+    }
+
+    .search-input {
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid #ffeead;
+        color: #ffeead;
+        font-size: 1rem;
+
+        transform: translateY(.6rem)
+    }
+
+
+    li a:hover:not(.active) {
+        background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    }
+
+    .active {
+        background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    }
+
+    #signIn{
+        float: right;
+        padding-right: .5rem;
+
+    }
+
+
+    @media screen and (max-width: 400px) {
+        li {
+            text-align: center;
+            float: none;
+
+        }
+
+
+
+    }
+
+</script>
+
+</html>

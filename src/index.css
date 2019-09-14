@@ -1,14 +1,368 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body, html {
+    height: 100%;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/*background images****************************************************************/
+.pimg1 {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('./img/upShotCity.jpeg');
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url('./img/image2.jpg');
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image: url('./img/image3.jpg');
+    min-height: 400px;
+}
+
+.pimg1, .pimg2, .pimg3 {
+    /*position: relative;*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /*
+    this is the actual parameter that causes parallax
+      fixed = parallax
+      scroll = normal
+    */
+    background-attachment: fixed;
+}
+
+@media (max-width: 568px) {
+    .pimg1, .pimg2, .pimg3 {
+        background-attachment: scroll;
+    }
+}
+
+/*text/component sections*******************************************************/
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+    padding: 0px 0px;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+/*carousel*********************************************************************/
+.carousel {
+    max-width: 900px;
+    max-height: 500px;
+    margin: auto;
+    -webkit-box-shadow: 5px 5px 15px 0px #000000;
+    box-shadow: 5px 5px 15px 0px #000000;
+}
+
+.topCarouselLine {
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.botCarouselLine {
+    text-shadow: 2px 2px 2px #000000;
+}
+
+@media only screen and (max-width: 414px) {
+    .carousel {
+        width: auto;
+        height: auto;
+    }
+
+    .carouselImg {
+        width: inherit;
+        height: inherit;
+    }
+
+}
+
+@media only screen and (min-width: 414px) {
+
+    .carouselImg {
+        width: 900px;
+        height: 500px;
+    }
+
+}
+
+/*ALL LEARN MORE BUTTONS************************************************************************/
+#learnMoreButton {
+
+    -webkit-box-shadow: 5px 5px 15px -3px #000000;
+    box-shadow: 5px 5px 15px -3px #000000;
+    border-color: transparent;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+}
+
+/*JumbotronRS.js*******************************************************************************/
+.jumbotronMediaQ {
+    background-image: linear-gradient(180deg, #E3FDF5 0%, #FFE6FA 100%);
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    /*flex-wrap: wrap;*/
+    font-size: 1.5rem;
+}
+
+.jumboMainText {
+    text-align: left;
+}
+
+.lets {
+    font-size: 2.7rem;
+}
+
+.lead {
+    font-style: italic;
+}
+
+.behind {
+    text-shadow: 3px 0px 2px rgba(0, 0, 0, 0.31);
+}
+
+.discover {
+}
+
+.explore {
+}
+
+#brandIconInJumbo {
+    /*clockwise shortcut*/
+    margin: 20rem 0rem 0rem 20rem;
+    transform: scale(6) translateY(-15px) rotate(45deg);
+    -webkit-box-shadow: 5px 5px 15px -3px #000000;
+    box-shadow: 5px 5px 15px -3px #000000;
+
+}
+
+#jumboLearnMoreButton {
+
+    -webkit-box-shadow: 5px 5px 15px -3px #000000;
+    box-shadow: 5px 5px 15px -3px #000000;
+    border-color: transparent;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+
+    transform: scale(1.5) translateX(1.5rem) translateY(2rem);
+
+}
+
+
+/*when smaller than 1248************************************************************/
+@media only screen and (max-width: 1248px) {
+    .jumboImage {
+        display: none;
+    }
+
+    .jumbotronMediaQ {
+        justify-content: center;
+    }
+
+    .jumboMainText {
+        text-align: center;
+    }
+
+    #brandIconInJumbo {
+        display: none;
+    }
+
+    #jumboLearnMoreButton {
+
+        transform: translateX(-10px);
+
+    }
+
+}
+
+/*Cards******************************************************************************/
+.cardText {
+    color: black;
+}
+
+#cardLearnButton {
+    transform: scale(.6);
+    font-size: 27px;
+
+}
+
+
+/*email form group**********************************************************************************/
+#formGroup {
+    transform: scale(.5);
+}
+
+
+/*Sign up button*******************************************************************************/
+/*use unique ids instead of class names for bootstrap items*/
+#lastButton {
+    background-color: black;
+    border-color: black;
+}
+
+#forwardIcon {
+    padding: 0px;
+}
+
+
+
+
+/*Social Media Icons******************************************************************/
+.fa {
+    padding: 20px;
+    font-size: 40px;
+    width: 30px;
+    margin: 5px 2px;
+    color: white;
+    transform: scale(1.4) translateX(-1rem);
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/*Contact Email******************************************************************/
+.email {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+
+
+/*button fx*************************************************************************************/
+
+/* Shutter In Vertical,  apply this class name to the button class="hvr-shutter-in-vertical"*/
+.hvr-shutter-in-vertical {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+
+    /*background: red;*/
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.hvr-shutter-in-vertical:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    /*it will transition from this color to its normal color*/
+    /*change this, to change bg color*/
+    background: #3495ff;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-shutter-in-vertical:hover, .hvr-shutter-in-vertical:focus, .hvr-shutter-in-vertical:active {
+    /*color: red;*/
+}
+
+.hvr-shutter-in-vertical:hover:before, .hvr-shutter-in-vertical:focus:before, .hvr-shutter-in-vertical:active:before {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+}
+
+/* Bounce To Bottom Button ************************************************/
+.hvr-bounce-to-bottom {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.hvr-bounce-to-bottom:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-bounce-to-bottom:hover, .hvr-bounce-to-bottom:focus, .hvr-bounce-to-bottom:active {
+    /*color: white;*/
+}
+
+.hvr-bounce-to-bottom:hover:before, .hvr-bounce-to-bottom:focus:before, .hvr-bounce-to-bottom:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+/* Icon Forward Button ************************************************/
+.hvr-icon-forward {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+}
+
+.hvr-icon-forward .hvr-icon {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-icon-forward:hover .hvr-icon, .hvr-icon-forward:focus .hvr-icon, .hvr-icon-forward:active .hvr-icon {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
 }
