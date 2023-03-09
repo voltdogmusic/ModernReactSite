@@ -38,13 +38,6 @@ class JumbotronRBS extends Component {
 
 
                             </p>
-                            <img
-                                width={225 / 4}
-                                height={225 / 4}
-                                src={brand}
-                                alt="Your Brand Icon"
-                                id='brandIconInJumbo'
-                            />
                         </div>
                     </div>
                     <img
