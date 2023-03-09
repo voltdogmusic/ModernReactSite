@@ -1,6 +1,6 @@
 # ModernReactSite
 
-Hoseted here 
+Hosted here 
 
 https://modernreactsitebytlee.netlify.app
 
